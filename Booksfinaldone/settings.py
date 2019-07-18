@@ -37,9 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'registration',
-    #'rango',
-    'home'
+    'home',
+    'registration'
+
 ]
 INCLUDE_REGISTER_URL=True
 
@@ -133,7 +133,20 @@ STATICFILES_DIRS = [
 ACCOUNT_ACTIVATION_DAYS=7
 REGISTRATION_AUTO_LOGIN=True
 
-ACCOUNT_AUTHENTICATED_REGISTRATION_REDIRECTS=False
+ACCOUNT_AUTHENTICATED_REGISTRATION_REDIRECTS=True
+LOGIN_REDIRECT_URL='/store/'
 #REGISTRATION_OPEN = True  # If True, the user will be automatically logged in.
 #LOGIN_REDIRECT_URL = '/rango/'  # The page you want users to arrive at after they successful log in
 #LOGIN_URL = '/accounts/login/'
+
+#Email settings
+#EMAIL_BACKEND="django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST="smtp.gmail.com"
+EMAIL_HOST_USER="salonisoniminde@gmail.com"
+EMAIL_HOST_PASSWORD="saloni1411"
+EMAIL_PORT=587
+EMAIL_USE_TLS=True
+DEFAULT_FROM_EMAIL="boooks@mysterybooks.com"
+
+
+

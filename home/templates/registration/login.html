@@ -1,0 +1,12 @@
+{% extends 'base1.html' %}
+
+{% block content % }
+
+<form method="post" action='.'>
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Log In"/>
+    <input type="hidden"  name="next" value="{{next}}"/>
+</form>
+
+{% endblock %}

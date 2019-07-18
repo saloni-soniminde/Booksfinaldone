@@ -1,13 +1,19 @@
 from django.shortcuts import render
 from . models import Books
+from django.core.mail import send_mail
+from django.conf import settings
 # Create your views here.
 def index(request):
     return render(request,'temp.html')
-    #return render(request, 'rango/index.html', context)
+
 
 def store(request):
     count=Books.objects.all().count()
     context={
-        'count':count
+        'count':count,
+
     }
-    return render(request,'hi.html',context)
+    request.session['location']="unknown"
+    if request.user.is_authenticated:
+        request.session['location'] = "Earth"
+    return render(request,'base1.html',context)

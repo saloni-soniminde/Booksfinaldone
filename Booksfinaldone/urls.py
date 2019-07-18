@@ -22,7 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.index),
     #path('rango/', include('rango.urls')),
-    url('accounts/',include('registration.backends.default.urls')),
+    url('accounts/', include('registration.backends.default.urls')),
     path('store/',views.store)
 
 ]
