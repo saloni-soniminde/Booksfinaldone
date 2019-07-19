@@ -6,7 +6,6 @@ from django.conf import settings
 def index(request):
     return render(request,'temp.html')
 
-
 def store(request):
     count=Books.objects.all().count()
     context={
@@ -16,4 +15,4 @@ def store(request):
     request.session['location']="unknown"
     if request.user.is_authenticated:
         request.session['location'] = "Earth"
-    return render(request,'base1.html',context)
+    return render(request,'base.html',context)

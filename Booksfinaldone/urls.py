@@ -20,9 +20,7 @@ from home import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.index),
-    #path('rango/', include('rango.urls')),
+    path('',views.index, name='index'),
     url('accounts/', include('registration.backends.default.urls')),
     path('store/',views.store)
-
 ]
