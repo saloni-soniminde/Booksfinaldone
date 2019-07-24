@@ -7,12 +7,10 @@ def index(request):
     return render(request,'temp.html')
 
 def store(request):
-    count=Books.objects.all().count()
+    books=Books.objects.all().count()
     context={
-        'count':count,
+        'books':books,
 
     }
-    request.session['location']="unknown"
-    if request.user.is_authenticated:
-        request.session['location'] = "Earth"
+
     return render(request,'base.html',context)

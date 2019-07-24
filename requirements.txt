@@ -9,3 +9,8 @@ virtualenv==16.6.1
 virtualenv-clone==0.5.3
 virtualenvwrapper==4.8.4
 virtualenvwrapper-win==1.2.5
+social-auth-core
+social-auth-app-django
+python-social-auth==0.2.7
+django-bootstrap3==5.4.0
+django-bootstrap-themes==3.1.2
