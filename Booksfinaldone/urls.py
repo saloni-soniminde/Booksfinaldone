@@ -22,5 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.index, name='index'),
     url('accounts/', include('registration.backends.default.urls')),
-    path('store/',views.store)
+    url(r'^oauth/', include('social_django.urls', namespace='social')),
+    path('store/', views.store)
 ]
