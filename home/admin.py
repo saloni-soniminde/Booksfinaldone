@@ -2,7 +2,7 @@ from django.contrib import admin
 from . models import Books, Author
 # Register your models here.
 class BookAdmin(admin.ModelAdmin):
-    list_display=('title','author','price')
+    list_display=('title','price')
 
 class AuthorAdmin(admin.ModelAdmin):
     list_display = ('last_name', 'first_name')

@@ -38,10 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'social_django',
-    'registration',
     'bootstrap3',
     'bootstrap_themes',
     'home',
+    'registration',
 ]
 INCLUDE_REGISTER_URL=True
 
