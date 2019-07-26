@@ -44,7 +44,7 @@ def add_to_cart(request, book_id):
 
 
 def remove_from_cart(request, book_id):
-    if request.user.is_authenticated():
+    if request.user.is_authenticated:
         try:
             book = Books.objects.get(pk=book_id)
         except ObjectDoesNotExist:

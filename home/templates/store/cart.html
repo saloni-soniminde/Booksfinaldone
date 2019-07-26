@@ -9,7 +9,7 @@
         {% for item in cart %}
             <div class="cart_item">
                 <div class="cart_listing">
-                    <span class="title">{{ item.book.title }}</span> by {{ author.book.cart.firstname }} {{ author.book.cart.lastname }}
+                    <span class="title">{{ item.book.title }}</span> by {{ item.book.author.first_name }} {{ item.book.author.last_name }}
                 </div>
                 <div class="cart_price">
                     <span class="cart_quantity">{{ item.quantity }} x $<span class="cart_value">{{ item.book.price }}</span></span>
