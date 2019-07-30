@@ -71,6 +71,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'social_django.context_processors.backends',  # <--
                 'social_django.context_processors.login_redirect',
+                'django.template.context_processors.media',
             ],
         },
     },
@@ -136,6 +137,9 @@ STATIC_URL = '/static/'
   #  os.path.join(BASE_DIR, "static"),
  #   '/var/www/static/',
 #]
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+MEDIA_URL = "/media/"
 
 #Registration
 
