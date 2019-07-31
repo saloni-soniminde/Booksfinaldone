@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'social_django',
     'bootstrap3',
     'bootstrap_themes',
+    'debug_toolbar',
     'home',
     'registration',
 ]
@@ -54,6 +55,12 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'social_django.middleware.SocialAuthExceptionMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
+]
+INTERNAL_IPS = [
+    # ...
+    '127.0.0.1',
+    # ...
 ]
 
 ROOT_URLCONF = 'Booksfinaldone.urls'

@@ -13,3 +13,4 @@ social-auth-app-django
 python-social-auth==0.2.7
 django-bootstrap3==5.4.0
 django-bootstrap-themes==3.1.2
+django-debug-toolbar
